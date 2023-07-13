@@ -1,0 +1,52 @@
+<app-header />
+
+<div class="min-h-[80vh]">
+  <div
+    class="h-[10vh] border-b border-gray-300 flex items-center text-center justify-center"
+  >
+    <span class="font-bold text-xl">Movie Database Alternative</span>
+  </div>
+  <div class="p-8">
+    <form class="mb-8 border rounded-md h-12 relative flex items-center justify-center" (ngSubmit)="searchFilm()">
+      <!-- TODO Something is missing on those filters -->
+      <input
+        [(ngModel)]="movieFilters.title"
+        class="rounded-tl-md rounded-bl-md w-[80%] outline-none px-4"
+        id="title"
+        type="text"
+        name="title"
+        placeholder="Entrer le titre d'un film de votre choix"
+      />
+      <button
+        class="rounded-tr-md rounded-br-md bg-blue-800 hover:bg-blue-700 h-full w-[20%] text-white"
+        type="submit"
+      >
+        <div class="flex items-center justify-center p-0 m-0 gap-x-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+          >
+            <path
+              d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
+              fill="rgba(255,255,255,1)"
+            ></path>
+          </svg>
+          Search
+        </div>
+      </button>
+    </form>
+    <ul
+      role="list"
+      class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+    >
+      <ng-container *ngIf="movies$ | async as movies">
+        <ng-container *ngFor="let movie of movies">
+          <app-movie-card [movie]="movie"></app-movie-card>
+        </ng-container>
+      </ng-container>
+    </ul>
+  </div>
+</div>
+<app-footer />

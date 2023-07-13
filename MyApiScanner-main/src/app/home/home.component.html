@@ -1,0 +1,47 @@
+<app-header />
+<div class="min-h-[80vh]">
+  <div
+    class="h-[10vh] border-b border-gray-300 flex items-center text-center justify-center"
+  >
+    <span class="font-bold text-xl"
+      >Système d'identification du contenu et visualisation des données
+      API</span
+    >
+  </div>
+  <div class="p-6 lg:px-12">
+    <span class="font-bold"> > Nos API</span>
+  </div>
+  <div class="p-6 lg:px-12">
+    <ul
+      role="list"
+      class="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 xl:gap-x-8"
+    >
+      <a [routerLink]="'/aboutAPI'">
+        <li
+          class="overflow-hidden rounded-xl border border-gray-200 hover:border-gray-400 hover:border-2 cursor-pointer"
+        >
+          <div
+            class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6"
+          >
+            <img
+              src="/assets/image.png"
+              alt="Tuple"
+              class="h-12 w-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10"
+            />
+            <div class="text-sm font-medium leading-6 text-gray-900">
+              Movie Database Alternative
+            </div>
+          </div>
+          <div class="p-6">
+            <span>
+              Service web RESTful permettant d'accéder aux informations, aux
+              images et à d'autres éléments de la base de données de films.
+            </span>
+          </div>
+        </li>
+      </a>
+    </ul>
+  </div>
+</div>
+
+<app-footer />

@@ -1,0 +1,40 @@
+<app-header />
+<div class="min-h-[80vh]">
+  <div
+    class="h-[10vh] border-b border-gray-300 flex items-center text-center justify-center"
+  >
+    <span class="font-bold text-xl">Movie Database Alternative</span>
+  </div>
+  <div class="p-6 lg:px-12">
+    <span class="font-bold"> > À propos </span>
+  </div>
+  <div class="p-6 lg:px-12">
+    <p class="mb-4">
+      Vous cherchez une API pour fournir des données sur vos films préférés ?
+      Consultez l'API Alternative pour enrichir votre application. L'API obtient
+      des informations de la base de données et renvoie les résultats au format
+      JSON ou XML. Vous pouvez même effectuer une recherche par IMDb ID pour
+      obtenir des résultats similaires à partir de la base de données. Consultez
+      les points de terminaison de l'API pour interroger différents types de
+      données, notamment:
+    </p>
+
+    <ul>
+      <li>- Des listes de titres de films</li>
+      <li>- Affiches de films</li>
+      <li>- Episodes de séries télévisées et bien plus encore !</li>
+    </ul>
+    <a target="_blank" class="text-blue-700 underline" href="https://rapidapi.com/rapidapi/api/movie-database-alternative">
+      - Lien vers l'API
+    </a>
+    <br />
+    <a [routerLink]="'/movie-database-alternative'">
+      <button
+        class="bg-blue-800 hover:bg-blue-700 text-white p-2 rounded-md font-bold mt-4"
+      >
+        Essayer l'Api
+      </button>
+    </a>
+  </div>
+</div>
+<app-footer />

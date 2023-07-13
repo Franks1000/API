@@ -1,0 +1,49 @@
+<app-header />
+<div class="min-h-[80vh]">
+  <div
+    class="h-[10vh] border-b border-gray-300 flex items-center text-center justify-center"
+  >
+    <span class="font-bold text-xl">Movie Database Alternative</span>
+  </div>
+  <div class="p-8 flex gap-x-4 min-h-[70vh]">
+    <div class="block w-1/2 h-[400px] overflow-hidden rounded-lg">
+      <img
+        src="{{ movie.Poster }}"
+        alt="{{ movie.Title }}"
+        class="pointer-events-none h-[100%] w-full object-contain"
+      />
+    </div>
+    <div class="w-1/2">
+      <h2 class="font-bold text-2xl mb-2">{{ movie.Title }}</h2>
+      <p class="text-gray-600 text-lg mb-6">
+        {{ movie.Plot }}
+      </p>
+      <p class="text-gray-600 font-bold text-sm">
+        Acteurs : {{ movie.Actors }}
+      </p>
+      <p class="text-gray-600 font-bold text-sm">Genres : {{ movie.Genre }}</p>
+      <p class="text-gray-600 font-bold text-sm">
+        Langue : {{ movie.Language }}
+      </p>
+      <p class="text-gray-600 font-bold text-sm">Pays : {{ movie.Country }}</p>
+      <p class="text-gray-600 font-bold text-sm">Type : {{ movie.Type }}</p>
+      <p class="text-gray-600 font-bold text-sm">
+        Date de sortie : {{ movie.Released }}
+      </p>
+      <p class="text-gray-600 font-bold text-sm">Durée : {{ movie.Runtime }}</p>
+      <p class="text-gray-600 font-bold text-sm">
+        Distribution : {{ movie.Director }}
+      </p>
+      <p class="text-gray-600 font-bold text-sm">
+        Autheurs : {{ movie.Writer }}
+      </p>
+      <p class="text-gray-600 font-bold text-sm">
+        Note : {{ movie.Ratings[0].Value }}
+      </p>
+      <p class="text-gray-600 font-bold text-sm">
+        Production : {{ movie.Production }}
+      </p>
+    </div>
+  </div>
+</div>
+<app-footer />
